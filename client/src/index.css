@@ -60,7 +60,15 @@
 
   --muted-foreground: 220 12% 35%;
 
-  --accent: 264 35% 85%;
+  --success: 142 71% 45%;
+
+  --success-foreground: 0 0% 98%;
+
+  --warning: 45 93% 58%;
+
+  --warning-foreground: 220 9% 15%;
+
+  --accent: 264 89% 78%;
 
   --accent-foreground: 220 9% 15%;
 
@@ -178,9 +186,17 @@
 
   --muted-foreground: 220 9% 65%;
 
-  --accent: 264 40% 20%;
+  --success: 142 71% 65%;
 
-  --accent-foreground: 0 0% 90%;
+  --success-foreground: 0 0% 98%;
+
+  --warning: 45 93% 68%;
+
+  --warning-foreground: 220 9% 15%;
+
+  --accent: 264 89% 78%;
+
+  --accent-foreground: 220 9% 15%;
 
   --destructive: 0 75% 55%;
 
@@ -324,5 +340,76 @@
   .border.active-elevate-2:not(.no-active-interaction-elevate)::after,
   .border.hover-elevate:not(.no-hover-interaction-elevate)::after {
     inset: -1px;
+  }
+
+  /* Glass-morphism effects */
+  .glass-morphism {
+    @apply bg-background/10 backdrop-blur-md border border-white/20;
+  }
+
+  .glass-morphism-card {
+    @apply bg-card/80 backdrop-blur-md border border-border/50;
+  }
+
+  /* Gradient utilities */
+  .gradient-hero {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+  }
+
+  .gradient-card {
+    background: linear-gradient(135deg, hsl(var(--primary) / 0.1) 0%, hsl(var(--accent) / 0.1) 100%);
+  }
+
+  .gradient-button {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary)) 80%, hsl(var(--primary)) 100%);
+  }
+
+  /* Breathing animation for mindfulness */
+  @keyframes breathe {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.1); opacity: 1; }
+  }
+
+  .animate-breathe {
+    animation: breathe 4s ease-in-out infinite;
+  }
+
+  /* Gentle hover effects - using elevation system */
+  .hover-gentle {
+    @apply hover-elevate transition-all duration-200;
+  }
+
+  /* Fade-in animations */
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-out;
+  }
+
+  .animate-fade-in-delayed {
+    animation: fade-in 0.8s ease-out 0.2s both;
+  }
+
+  /* Navbar blur backdrop */
+  .navbar-blur {
+    @apply bg-background/80 backdrop-blur-md border-b border-border/50;
+  }
+
+  /* Progress bar gradient */
+  .progress-gradient {
+    background: linear-gradient(90deg, hsl(var(--primary)) 0%, hsl(var(--success)) 100%);
+  }
+
+  /* Focus indicators for accessibility */
+  .focus-indicator:focus {
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background;
+  }
+
+  /* Emergency SOS styling */
+  .emergency-sos {
+    @apply bg-destructive text-destructive-foreground shadow-lg animate-pulse hover-elevate active-elevate-2;
   }
 }
