@@ -1,0 +1,112 @@
+Build me a complete, professional, hackathon-winning frontend website using HTML, CSS, and JavaScript only (no backend for now).
+
+Project Title: MindCare – AI-Powered Student Mental Health Platform
+
+Requirements:
+The website should be modern, aesthetic, responsive, fully functional in frontend, with privacy-first approach. It must look like a real working product even though backend is not yet implemented.
+
+👉 Core Structure:
+
+Navbar (fixed, animated, dropdowns): Home, Dashboard, Features, Forum, AI Copilot, Resources, Contact, Profile (with login/logout visible after login).
+
+Landing Page: Attractive hero section, tagline, call-to-action → “Start Your MindCare Journey”.
+
+👉 Mandatory Features:
+
+Authentication (Frontend Only):
+
+Sign-up & Login pages (form validation, localStorage simulation).
+
+Privacy-first → Show “Your data is encrypted & private” banner.
+
+Profile page → Display user info & saved progress.
+
+AI Stress & Emotion Detection:
+
+Upload/take photo → JS simulates face analysis (happy, sad, stressed, neutral).
+
+Voice input (mic) → Simulated tone/stress detection.
+
+Show results with graphs (Chart.js).
+
+Student Dashboard:
+
+Personalized mental health score.
+
+Quick access to relaxation exercises, daily tips, counselor booking.
+
+Progress Tracker:
+
+Sleep tracker, study hours tracker, mood diary → stored in localStorage.
+
+Display progress in charts/graphs.
+
+AI Copilot Chatbot:
+
+Chatbox where students get stress-relief tips, motivational quotes, study balance suggestions.
+
+Simulate “AI response” with predefined smart answers.
+
+VR/Mindfulness Room:
+
+Breathing exercise animation.
+
+Background calming music player.
+
+Meditation timer.
+
+Peer Forum (Frontend Simulation):
+
+Students can post questions/comments (dummy posts in JSON).
+
+Like & reply options (frontend-only).
+
+Counselor Booking (Frontend):
+
+Form to schedule counseling → data stored in localStorage.
+
+Dummy calendar UI with slot selection.
+
+Emergency SOS:
+
+Dedicated page with helpline numbers (India: 112, 1800-599-0019, etc.).
+
+“Quick Help” button always visible in navbar/footer.
+
+Admin Analytics (Simulation):
+
+Graphs: % stressed students, avg. sleep, peak stress hours.
+
+Dummy data for visualization.
+
+👉 Extra Advanced Features (for impact):
+
+Resource Library: Study techniques, time management, stress-relief exercises.
+
+Gamification: Daily check-ins give badges (“Mindful Day”, “Focus Master”).
+
+Multi-language Support: English/Hindi switch.
+
+Dark/Light Mode Toggle.
+
+AI Recommendation Cards: “Based on your mood, try X technique today.”
+
+👉 Tech Stack:
+
+HTML5 (multi-page)
+
+CSS3 (modern, gradient UI, animations, responsive)
+
+JavaScript (logic, dummy AI simulations, localStorage)
+
+Chart.js (analytics/graphs)
+
+Output:
+
+Provide me full working code (HTML, CSS, JS) in a structured format.
+
+All navbar links must open proper sections/pages.
+
+All features must look functional in frontend, even if backend is dummy.
+
+Design must be SIH-level modern, sleek, and professional.
