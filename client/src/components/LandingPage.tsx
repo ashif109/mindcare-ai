@@ -1,6 +1,7 @@
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import heroImage from '@assets/stock_images/students_studying_to_612bb6c4.jpg';
 import { 
   Brain, 
   Heart, 
@@ -74,28 +75,66 @@ export default function LandingPage() {
   ];
 
   return (
-    <div className="min-h-screen pt-24">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative px-4 py-20 text-center">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-3xl mx-4"></div>
-        <div className="relative z-10 max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            {t('hero.title')}
+      <section 
+        className="relative min-h-screen flex items-center justify-center text-center text-white overflow-hidden"
+        style={{
+          backgroundImage: `url(${heroImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        {/* Dark gradient overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/50 to-black/60"></div>
+        <div className="absolute inset-0 gradient-hero opacity-30"></div>
+        
+        <div className="relative z-10 max-w-5xl mx-auto px-4 py-32 animate-fade-in">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
+            <span className="block mb-2">Your Mental Health,</span>
+            <span className="block bg-gradient-to-r from-white via-accent to-white bg-clip-text text-transparent">
+              Our Priority
+            </span>
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            {t('hero.subtitle')}
+          <p className="text-xl sm:text-2xl lg:text-3xl text-white/90 mb-12 max-w-3xl mx-auto font-medium leading-relaxed animate-fade-in-delayed">
+            Empowering students with AI-driven mental health support, peer community, and personalized wellness insights.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-delayed">
             <Link href={isAuthenticated ? "/dashboard" : "/signup"}>
-              <Button size="lg" className="flex items-center space-x-2" data-testid="button-cta-main">
-                <span>{t('hero.cta')}</span>
-                <ArrowRight className="h-5 w-5" />
+              <Button 
+                size="lg" 
+                className="flex items-center space-x-3 text-lg px-8 py-4 gradient-button hover-gentle focus-indicator shadow-xl" 
+                data-testid="button-cta-main"
+              >
+                <span>Start Your Journey</span>
+                <ArrowRight className="h-6 w-6" />
               </Button>
             </Link>
-            <Button variant="outline" size="lg" className="flex items-center space-x-2">
-              <Play className="h-5 w-5" />
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="flex items-center space-x-3 text-lg px-8 py-4 bg-white/10 backdrop-blur-md border-white/30 text-white hover:bg-white/20 focus-indicator shadow-xl"
+            >
+              <Play className="h-6 w-6" />
               <span>Watch Demo</span>
             </Button>
+          </div>
+          
+          {/* Trust indicators */}
+          <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center animate-fade-in-delayed">
+            <div className="space-y-2">
+              <div className="text-3xl sm:text-4xl font-bold text-white">50,000+</div>
+              <div className="text-white/80 text-lg">Students Supported</div>
+            </div>
+            <div className="space-y-2">
+              <div className="text-3xl sm:text-4xl font-bold text-white">95%</div>
+              <div className="text-white/80 text-lg">Report Improvement</div>
+            </div>
+            <div className="space-y-2">
+              <div className="text-3xl sm:text-4xl font-bold text-white">24/7</div>
+              <div className="text-white/80 text-lg">AI Support Available</div>
+            </div>
           </div>
         </div>
       </section>
